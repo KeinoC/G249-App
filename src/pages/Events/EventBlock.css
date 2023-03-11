@@ -1,0 +1,25 @@
+
+
+.event-block {
+    width: 80%;
+    height: 5%;
+    position: relative;
+    border: solid 1px;
+    border-color: black;
+    display: flex;
+    text-align:center;
+    margin: 1rem;
+}
+
+.event-blocks-container {
+    display: inline-block;
+    align-content: center;
+}
+
+.date-block {
+    min-height: 10rem;
+    width: 10rem;
+    border: solid 1px;
+    text-align: center;
+
+}
