@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from "react";
+// import Popup from 'reactjs-popup';
 
 
-
-export default function AddEventForm({onAddEvent}) {
+export default function AddEventForm({onAddEvent, dataApi}) {
 
     const [showForm, setShowForm] = useState(false)
 
@@ -31,9 +31,10 @@ export default function AddEventForm({onAddEvent}) {
 
     function handleSubmit(e) {
         e.preventDefault();
-        console.log("submitting")
+        console.log("submitting") 
 
-        const newEvent = {
+        const newEvent =  {
+            event: {
             eventDate: formData.eventDate,
             eventType: formData.eventType,
             eventHost: formData.eventHost,
@@ -42,19 +43,21 @@ export default function AddEventForm({onAddEvent}) {
             contract: formData.contract,
             eventNotes: formData.eventNotes,
             eventPrice: formData.eventPrice
+            }
         }
 
         console.log(newEvent)
 
-        fetch("https://g249db.onrender.com/books", {
+        fetch(dataApi, {
             method: "POST",
             headers: {"content-type" : "application/json"},
             body: JSON.stringify(newEvent),
         })
             .then(res => res.json())
-            .then((newObj) => onAddEvent(newObj))
-        
-            setFormData(initialValue)
+            .then((newObj) => onAddEvent(newObj.event))
+
+            setShowForm(!showForm)
+
     }
 
 
@@ -63,15 +66,17 @@ export default function AddEventForm({onAddEvent}) {
     }    
 
     return (
-    <div className ="add-event-div">
-        <button className = "add-event-btn" onClick={toggleAddEventForm}>toggle form</button>
-        <h2>Add New Event</h2>
-        <form onSubmit = {handleSubmit}>
+    <div className ="add-event-div" display = ":none">
         
+        <button className = "add-event-btn" onClick={toggleAddEventForm}>toggle form</button>
+        
+        {showForm ?
+        <form onSubmit = {handleSubmit}>
+        <h2 className = "add-new-text">Add New Event</h2>
         <input
                 onChange = {handleInput}
                 name = "eventDate" 
-                type="text" 
+                type="date" 
                 placeholder = "Add Event Date"
                 value = {formData.eventDate}
                 />
@@ -133,6 +138,9 @@ export default function AddEventForm({onAddEvent}) {
                 />
             <input type="submit" />
         </form>
+        :
+        <></>
+}
     </div>
 
     )

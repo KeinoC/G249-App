@@ -1,11 +1,14 @@
-.App {
-  /* text-align: center; */
-}
+
 
 body {
-  background-color:whitesmoke;
+  background-color: rgb(22, 28, 28);
   color: rgb(125, 141, 35);
+  /* overflow-y: hidden; Hide vertical scrollbar */
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+}
 
+.example::-webkit-scrollbar {
+  display: none;
 }
 
 .App-logo {

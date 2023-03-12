@@ -17,23 +17,25 @@ function App() {
     setMasterEventList ([...masterEventList, newEvent]);
   }
 
+
+  const dataApi = "https://api.sheety.co/3132ef9a7c5a88398c1881749e1528c7/testDataForG249Api/events"
+  const idApi = "https://api.sheety.co/3132ef9a7c5a88398c1881749e1528c7/testDataForG249Api/trackid"
 ///// Pulling Data
 useEffect(() => {
-  fetch("https://g249db.onrender.com/books")
+  fetch(dataApi)
   .then( res => res.json())
-  .then( data => setMasterEventList(data)) }, [])
+  .then( data => setMasterEventList(data.events)) }, [])
 
-
-  
+  console.log(masterEventList)
 
 
 
 
   return (
     <div className="App">
-      <AddEventForm onAddEvent = {onAddEvent} />
+      <AddEventForm onAddEvent = {onAddEvent} dataApi = {dataApi} />
       <Events masterEventList = {masterEventList} />
-      <EventBlock masterEventList = {masterEventList}/>
+      <EventBlock masterEventList = {masterEventList} dataApi = {dataApi} />
     </div>
   );
 }

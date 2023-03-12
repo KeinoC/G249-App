@@ -8,6 +8,8 @@ function Events({masterEventList}) {
             return (
                 <EventBlock 
                     key = {event.id}
+                    id = {event.id}
+                    eventDate = {event.eventDate}
                     eventType = {event.eventType}
                     eventHost = {event.eventHost}
                     hostPhone = {event.hostPhone}

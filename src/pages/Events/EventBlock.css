@@ -1,25 +1,91 @@
 
 
+
+
 .event-block {
-    width: 80%;
-    height: 5%;
-    position: relative;
+    width:80%;
+    min-height: 10vh;
+    /* position: relative; */
     border: solid 1px;
     border-color: black;
-    display: flex;
+    align-items: center;
     text-align:center;
     margin: 1rem;
+    border-radius: .75rem;
+    background-color: whitesmoke;
 }
+document.querySelector("#root > div > div.event-block")
 
 .event-blocks-container {
-    display: inline-block;
-    align-content: center;
+    position: relative;
+    width: 99vw;
+    margin: 5vh;
 }
 
-.date-block {
-    min-height: 10rem;
-    width: 10rem;
-    border: solid 1px;
+.date-block, .price-block, .type-block, .host-block, .contract-block, .notes-block, .delete-block, .add-block {
+    display: table-cell;
+    position: relative;
+    /* border: solid 1px; */
+    height: 10vh;
+    overflow: hidden;
     text-align: center;
+    vertical-align: middle
+    
 
 }
+
+li {
+    list-style: none;
+    text-align: left;
+    margin-left: 2vw;
+}
+
+.date-block, .price-block, .type-block, .contract-block {
+    min-width: 7vw;
+}
+
+.spacer1 {
+    min-width: 2vw;
+}
+
+.delete-block, .add-block {
+    min-width: 3vw;
+}
+
+
+.host-block, .notes-block {
+    width: 30vw;
+}
+
+.trash-icon, .add-icon {
+    width: 1rem;
+}
+
+.add-new-text {
+    text-align: center;
+}
+
+
+.trash-icon:hover, .add-icon:hover {
+    transform: scale(1.5);
+    animation-timing-function: linear;   
+    cursor: pointer;
+    color: salmon;
+  }
+
+.add-icon:hover {
+    transform: scale(1.5);
+    animation-timing-function: linear;   
+    cursor: pointer;
+    color: lime;
+  }
+
+  .date-block {
+    background-color: salmon;
+    border-top-left-radius: .7rem;
+    border-bottom-left-radius: .7rem;
+
+  }
+  
+
+
