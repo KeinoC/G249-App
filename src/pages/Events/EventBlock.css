@@ -14,7 +14,6 @@
     border-radius: .75rem;
     background-color: whitesmoke;
 }
-document.querySelector("#root > div > div.event-block")
 
 .event-blocks-container {
     position: relative;
