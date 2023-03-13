@@ -48,6 +48,10 @@ li {
     min-width: 2vw;
 }
 
+.hidden {
+    display: none;
+}
+
 .delete-block, .add-block {
     min-width: 3vw;
 }
