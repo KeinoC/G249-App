@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+
 import './App.css';
 import Events from "./pages/Events/Events.js"
 import AddEventForm from "./pages/Events/AddEventForm.js"
