@@ -29,18 +29,6 @@ useEffect(() => {
   console.log(masterEventList)
 
 
-// const [state, setState] = useEffect({})
-
-// useEffect(() => {
-//   fetch("http://127.0.0.1:5000/events").then(response => {
-//     if (response.status == 200) {
-//       return response.json
-//   }
-// })
-//   .then(data => console.log(data))
-//   .then(error => console.log(error))
-// })
-
   return (
     <div className="App">
       <BrowserRouter>

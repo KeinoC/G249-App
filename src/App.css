@@ -1,7 +1,7 @@
 
 
 body {
-  background-color: rgb(22, 28, 28);
+  background-color: var(--c7);
   color: rgb(125, 141, 35);
   /* overflow-y: hidden; Hide vertical scrollbar */
   overflow-x: hidden; /* Hide horizontal scrollbar */
