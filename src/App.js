@@ -19,7 +19,7 @@ function App() {
   }
 
 
-  const dataApi = "https://api.sheety.co/3132ef9a7c5a88398c1881749e1528c7/testDataForG249Api/events"
+  const dataApi = "https://api.sheety.co/3132ef9a7c5a88398c1881749e1528c7/testDataForG249Api/events" /// add endpoint back
 ///// Pulling Data
 useEffect(() => {
   fetch(dataApi)
@@ -28,18 +28,6 @@ useEffect(() => {
 
   console.log(masterEventList)
 
-
-// const [state, setState] = useEffect({})
-
-// useEffect(() => {
-//   fetch("http://127.0.0.1:5000/events").then(response => {
-//     if (response.status == 200) {
-//       return response.json
-//   }
-// })
-//   .then(data => console.log(data))
-//   .then(error => console.log(error))
-// })
 
   return (
     <div className="App">
