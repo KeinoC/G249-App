@@ -3,10 +3,11 @@ import './App.css';
 import Events from "./pages/Events/Events.js"
 import AddEventForm from "./pages/Events/AddEventForm.js"
 import EventBlock from "./pages/Events/EventBlock.js"
+import Home from "./pages/Home/Home.jsx"
 
-// import { Router } from 'express';
-// import { Router } from '@angular/router';
+
 // import { Route, Routes, useNavigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 
 function App() {
@@ -30,21 +31,33 @@ useEffect(() => {
 
 // const [state, setState] = useEffect({})
 
-useEffect(() => {
-  fetch("http://127.0.0.1:5000/events").then(response => {
-    if (response.status == 200) {
-      return response.json
-  }
-})
-  .then(data => console.log(data))
-  .then(error => console.log(error))
-})
+// useEffect(() => {
+//   fetch("http://127.0.0.1:5000/events").then(response => {
+//     if (response.status == 200) {
+//       return response.json
+//   }
+// })
+//   .then(data => console.log(data))
+//   .then(error => console.log(error))
+// })
 
   return (
     <div className="App">
-      <AddEventForm onAddEvent = {onAddEvent} dataApi = {dataApi} />
-      <Events masterEventList = {masterEventList} />
-      <EventBlock masterEventList = {masterEventList} dataApi = {dataApi} />
+      <BrowserRouter>
+      <Routes>
+        <Route path="/" element = {<Home />} />
+      
+        <Route path="/events" element = {
+          <>
+            <AddEventForm onAddEvent = {onAddEvent} dataApi = {dataApi} />
+            <Events masterEventList = {masterEventList} />
+            <EventBlock masterEventList = {masterEventList} dataApi = {dataApi} />
+          </>
+        }>
+        </Route>
+
+      </Routes>
+        </BrowserRouter>
     </div>
   );
 }
