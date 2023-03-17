@@ -1,0 +1,55 @@
+body {
+    background: radial-gradient(ellipse at bottom, #022227 0%, #000000 100%);
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Montserrat:900");
+
+.garden {
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    font-size: 15vh;
+    letter-spacing: 1vw;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    background: url("https://thumbs.dreamstime.com/b/tropical-flower-pattern-seamless-flowers-blossom-flowers-nature-background-vector-illustration-61142748.jpg");
+    background:url('https://i.pinimg.com/originals/9f/9c/c5/9f9cc5217bb04790e5fb852b665ca2ff.jpg');
+    background-size: auto 200%;
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 20s linear infinite;
+        }
+
+    
+    @keyframes shine {
+        from {
+            background-position: center 0;
+        }
+        to {
+            background-position: center 200%;
+        }
+}
+
+.num {
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    font-size: 15vh;
+    letter-spacing: 1vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgb(194, 148, 31);
+}
+
+.garden>*:nth-child(1):hover {
+    transform: scale(1.1)
+}
