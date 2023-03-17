@@ -19,7 +19,7 @@ function App() {
   }
 
 
-  const dataApi = "https://api.sheety.co/3132ef9a7c5a88398c1881749e1528c7/testDataForG249Api/events"
+  const dataApi = "https://api.sheety.co/3132ef9a7c5a88398c1881749e1528c7/testDataForG249Api/events" /// add endpoint back
 ///// Pulling Data
 useEffect(() => {
   fetch(dataApi)
