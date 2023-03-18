@@ -4,7 +4,7 @@
 
 .event-block {
     width:80%;
-    min-height: 10vh;
+    min-height: 10dvh;
     /* position: relative; */
     border: solid 1px;
     border-color: black;
@@ -17,15 +17,15 @@
 
 .event-blocks-container {
     position: relative;
-    width: 99vw;
-    margin: 5vh;
+    width: 99dvw;
+    margin: 5dvh;
 }
 
 .date-block, .price-block, .type-block, .host-block, .contract-block, .notes-block, .delete-block, .add-block {
     display: table-cell;
     position: relative;
     /* border: solid 1px; */
-    height: 10vh;
+    height: 10dvh;
     overflow: hidden;
     text-align: center;
     vertical-align: middle
@@ -36,15 +36,15 @@
 li {
     list-style: none;
     text-align: left;
-    margin-left: 2vw;
+    margin-left: 2dvw;
 }
 
 .date-block, .price-block, .type-block, .contract-block {
-    min-width: 7vw;
+    min-width: 7dvw;
 }
 
 .spacer1 {
-    min-width: 2vw;
+    min-width: 2dvw;
 }
 
 .hidden {
@@ -52,12 +52,12 @@ li {
 }
 
 .delete-block, .add-block {
-    min-width: 3vw;
+    min-width: 3dvw;
 }
 
 
 .host-block, .notes-block {
-    width: 30vw;
+    width: 30dvw;
 }
 
 .trash-icon, .add-icon {
