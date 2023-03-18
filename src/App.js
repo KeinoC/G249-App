@@ -3,11 +3,16 @@ import './App.css';
 import Events from "./pages/Events/Events.js"
 import AddEventForm from "./pages/Events/AddEventForm.js"
 import EventBlock from "./pages/Events/EventBlock.js"
+
 import Home from "./pages/Home/Home.jsx"
+import Availability from "./pages/Availability/Availability.jsx"
+import Tour from "./pages/Tour/Tour.jsx"
+import About from "./pages/About/About.jsx"
+import Contact from "./pages/Contact/Contact.jsx"
 
 
 // import { Route, Routes, useNavigate } from "react-router-dom";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 
 function App() {
@@ -26,7 +31,7 @@ useEffect(() => {
   .then( res => res.json())
   .then( data => setMasterEventList(data.events)) }, [])
 
-  console.log(masterEventList)
+  
 
 
   return (
@@ -34,6 +39,10 @@ useEffect(() => {
       <BrowserRouter>
       <Routes>
         <Route path="/" element = {<Home />} />
+        <Route path="/availability" element = {<Availability masterEventList ={masterEventList} />}/>
+        <Route path= "/tour" element = {<Tour />}/>
+        <Route path= "/about" element = {<About />}/>
+        <Route path = "/contact" element = {<Contact />}/>
       
         <Route path="/events" element = {
           <>

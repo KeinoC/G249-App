@@ -2,10 +2,9 @@
   "name": "g249app",
   "version": "0.1.0",
   "private": true,
-  "engines" : {    
-    "node" : "18.15"
-},
-
+  "engines": {
+    "node": "18.15"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -14,6 +13,7 @@
     "express": "^4.18.2",
     "googleapis": "^112.0.0",
     "react": "^18.2.0",
+    "react-calendar": "^4.0.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.9.0",
     "react-scripts": "5.0.1",
