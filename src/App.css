@@ -16,8 +16,8 @@ body {
   color: var(--c1);
   overflow-y: hidden; /*Hide vertical scrollbar*/
   overflow-x: hidden; /* Hide horizontal scrollbar */
-  width: 100vw;
-  height: 100vh;
+  width: 100dvw;
+  height: 100dvh;
 }
 
 .example::-webkit-scrollbar {
@@ -37,7 +37,7 @@ body {
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   flex-direction: column;
   align-items: center;
