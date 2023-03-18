@@ -18,19 +18,20 @@
     display: inline-block;
     text-align: center;
     align-content: center;
-    position: relative;
+    position: absolute;
     width: 100dvw;
     height:100dvh;
     margin: 5dvh;
 }
 
 .garden {
-    height:10rem;
+    margin-top:0dvh;
+    min-width:90dvw;
+    height:16dvw;
     padding:0;
-    display: block;
-    margin-bottom: -1rem;
+    display: inline-block;
     font-family: "Montserrat", sans-serif;
-    font-size: 19dvw;
+    font-size: 16dvw;
     letter-spacing: 2dvw;
     position: relative;
     align-content: center;
@@ -57,19 +58,18 @@
 }
 
 .num {
+
     text-align: center;
-    display: block;
+    display: inline-block;
     align-content: center;
-    margin-top: -3%;
-    margin-bottom: 6dvh;
+    vertical-align: middle;
+    /* margin-top: -3%; */
+    margin-bottom: 7dvh;
     font-family: "Montserrat", ;
-    font-size: 15dvw;
+    font-size: 10dvw;
     font-style: italic;
-    letter-spacing: 3dvw;
-    position: relative;
-    /* top: 50%;
-    left: 50%;
-    transform: translateX(-50%); */
+    letter-spacing: 4dvw;
+    /* position: relative; */
     color: var(--c6);
 }
 
@@ -79,19 +79,18 @@
 
 .navbar {
     justify-content: space-between;
-    height: 20dvh;
-    width: 80dvw;
-    display: inline-block;
-    position: relative;
-    align-items: center;
-    vertical-align: middle;
+    height: auto;
+    min-width: 100dvw;
+    padding-bottom: 5dvh;
 }
 
 .nav-item {
+    /* display: flex; */
     justify-content: space-between;
-    padding: 2dvh;
-    height: 20dvh;
-    color: var(--c6)
+    padding: 0dvh;
+    /* height: 20dvh; */
+    color: var(--c6);
+    font-size: 100%;
 }
 
 .nav-item.inn:hover {
