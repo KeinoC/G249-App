@@ -4,6 +4,7 @@ import Events from "./pages/Events/Events.js"
 import AddEventForm from "./pages/Events/AddEventForm.js"
 import EventBlock from "./pages/Events/EventBlock.js"
 import Home from "./pages/Home/Home.jsx"
+import Availability from "./pages/Availability/Availability.jsx"
 
 
 // import { Route, Routes, useNavigate } from "react-router-dom";
@@ -34,6 +35,7 @@ useEffect(() => {
       <BrowserRouter>
       <Routes>
         <Route path="/" element = {<Home />} />
+        <Route path="/availability" element = {<Availability />}/>
       
         <Route path="/events" element = {
           <>
