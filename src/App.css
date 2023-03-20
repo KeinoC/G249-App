@@ -23,7 +23,7 @@ body {
   overflow-x: hidden; /* Hide horizontal scrollbar */
   width: 100dvw;
   height: 100dvh;
-  padding-right: 5dvw.
+  padding-right: 5dvw;
 }
 
 .example::-webkit-scrollbar {

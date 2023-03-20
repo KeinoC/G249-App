@@ -18,6 +18,7 @@ import React, { useEffect, useState } from "react";
 function App() {
 
   const [masterEventList, setMasterEventList] = useState([])
+  const [bookedEventDates, setBookedEventDates] = useState([])
 
   function onAddEvent(newEvent) {
     setMasterEventList ([...masterEventList, newEvent]);
@@ -29,8 +30,26 @@ function App() {
 useEffect(() => {
   fetch(dataApi)
   .then( res => res.json())
-  .then( data => setMasterEventList(data.events)) }, [])
+  .then( data => setMasterEventList(data.events)) 
+}, [])
 
+
+
+
+useEffect(() => {
+  const bookedArray = [];
+  masterEventList.forEach(event => {
+    const formattedDate = event.eventDate;
+    if (bookedArray.indexOf(formattedDate) < 0) {
+      bookedArray.push(formattedDate);
+    }
+  });
+  
+  setBookedEventDates(bookedArray);
+}, [masterEventList]);
+
+console.log(bookedEventDates)
+          
   
 
 
@@ -39,7 +58,13 @@ useEffect(() => {
       <BrowserRouter>
       <Routes>
         <Route path="/" element = {<Home />} />
-        <Route path="/availability" element = {<Availability masterEventList ={masterEventList} />}/>
+        <Route path="/availability" 
+          element = {<Availability 
+            masterEventList ={masterEventList} 
+            bookedEventDates = {bookedEventDates} 
+            setBookedEventDates = {setBookedEventDates}
+            />}
+            />
         <Route path= "/tour" element = {<Tour />}/>
         <Route path= "/about" element = {<About />}/>
         <Route path = "/contact" element = {<Contact />}/>

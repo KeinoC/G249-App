@@ -18,13 +18,24 @@
     display: inline-block;
     position: relative;
     align-items: center;
-    vertical-align: middle;
+    vertical-align: top;
+    text-align: center;
 }
 
+a:link { text-decoration: none; }
+a:visited { text-decoration: none; }
+a:hover { text-decoration: none; }
+a:active { text-decoration: none; }
+
 .nav-item {
-    display: inline-block;
-    justify-content: space-between;
-    padding-left: 10%;
+    font-size: 1.1rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-style: bold;
+    margin-left: 5%;
+    margin-right: 5%;
+    /* padding-left: 10%; */
     /* height: 20dvh; */
     color: var(--c1)
 }
