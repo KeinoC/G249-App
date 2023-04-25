@@ -66,13 +66,13 @@ function App() {
 
 
     // on user logout / disconnect
-    useEffect(() => {
-        if(user) {
-            navigate("/dashboard")
-        } else {
-            navigate("/login")
-        }
-    },[user]) 
+    // useEffect(() => {
+    //     if(user) {
+    //         navigate("/dashboard")
+    //     } else {
+    //         navigate("/login")
+    //     }
+    // },[user]) 
 
 
     return (
