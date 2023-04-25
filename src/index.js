@@ -1,16 +1,17 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-// import { Route, Routes, useNavigate } from "react-router-dom";
-// import { Router } from 'express';
+import React, { useState, useContext } from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import { DataContext, DataProvider } from "./redux/DataContext";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
-      <App />
-  </React.StrictMode>
+    <React.StrictMode>
+        <DataProvider>
+            <App />
+        </DataProvider>
+    </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function

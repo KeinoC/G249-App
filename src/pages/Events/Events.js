@@ -3,7 +3,6 @@ import EventBlock from "./EventBlock.js"
 
 
 function Events({masterEventList}) {
-console.log(masterEventList)
 
         const eventBlocks = masterEventList.map(event => {
             return (
