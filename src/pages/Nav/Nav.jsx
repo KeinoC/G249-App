@@ -4,6 +4,13 @@ import "../Home/Home.css"
 import './Nav.css'
 import { useNavigate, useLocation } from "react-router-dom"
 import { DataContext } from "../../redux/DataContext"
+import {
+    createUserWithEmailAndPassword,
+    signInWithEmailAndPassword,
+    onAuthStateChanged,
+    signOut,
+} from "firebase/auth";
+import { auth } from "../Access/firebase-config";
 
 
 export default function Nav() {
@@ -11,6 +18,13 @@ export default function Nav() {
 const navigate = useNavigate()
 const location = useLocation()
 const { user, setUser } = useContext(DataContext)
+
+
+const logout = async () => {
+    await signOut(auth);
+    setUser({})
+    navigate("/login")
+};
 
     return (
     <nav className = "navbar">
@@ -36,7 +50,11 @@ const { user, setUser } = useContext(DataContext)
         </Link>
 
         <Link to ="/login" className = "nav-item">
-            <span >Login</span>  <span>Logout</span>
+            <span >Login</span>
+        </Link>
+
+        <Link  className = "nav-item">
+            <span onClick={logout}>Logout</span>
         </Link>
 
     </nav>
