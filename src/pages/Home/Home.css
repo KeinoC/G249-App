@@ -14,14 +14,12 @@
 }
 
 .homepage {
-    padding-top:2dvh;
-    display: inline-block;
+    /* padding-top:2dvh; */
     text-align: center;
     align-content: center;
-    position: absolute;
     width: 100dvw;
-    height:100dvh;
     margin-top: 4%;
+    height:100dvh;
 }
 
 .garden {
