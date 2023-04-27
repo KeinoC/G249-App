@@ -11,6 +11,7 @@ import GoogleAccess from "./GoogleAccess";
 import { DataContext } from "../../redux/DataContext";
 import { useNavigate } from "react-router-dom";
 import Nav from "../Nav/Nav";
+import "./Access.css"
 
 function App() {
     const navigate = useNavigate();
@@ -90,7 +91,7 @@ function App() {
     return (
         <div className="App">
             <Nav />
-            <div>
+            <div className = "access-container">
                 <h3> Register User </h3>
                 <input
                     placeholder="Email..."

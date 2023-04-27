@@ -5,7 +5,7 @@
     --c4: rgb(42.76600985221675, 174.89408866995075, 149.13546798029557);
     --c5: rgb(147.71782178217822, 115.21782178217822, 9.623762376237623);
     --c55: rgba(148, 116, 10, 0.183);
-    --c6: rgb(15.763124199743919, 66.70486555697823, 54.88028169014085);
+    --c6: rgba(16, 67, 55, 0.92);
     --c7: rgb(19.191163976210706, 117.50382327952421, 98.20645709430757);
     --c75: rgba(19, 118, 98, 0.296);
     --c8: rgb(67.43333333333334, 55.142857142857146, 8.417460317460318);
@@ -13,13 +13,14 @@
 
 .navbar {
     justify-content: space-between;
-    height: 10dvh;
+    height: 5dvh;
     width: 80%;
     display: inline-block;
     position: relative;
     align-items: center;
     vertical-align: top;
     text-align: center;
+    /* background-color: var(--c5) */
 }
 
 a:link { text-decoration: none; }
@@ -33,14 +34,21 @@ a:active { text-decoration: none; }
     justify-content: center;
     align-items: center;
     font-style: bold;
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-left: 1%;
+    margin-right: 1%;
     /* padding-left: 10%; */
     /* height: 20dvh; */
-    color: var(--c1)
+    color: var(--c1);
+    background-color: var(--c6);
+    color: rgb(242, 215, 163);
+    padding: .5vw;
+    min-width: 8vw;
+    border-radius: 10px;
+
+
 }
 
 .nav-item:hover {
     transform: scale(1.2);
-    
+    background-color: var(--c7);
 }
