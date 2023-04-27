@@ -22,6 +22,7 @@
     height:100dvh;
 }
 
+
 .garden {
     
     margin-top:10dvh;
@@ -47,6 +48,24 @@
     animation: shine 20s linear infinite;
 }
 
+.g-letter {
+    font-size: 16dvw;
+    letter-spacing: 2dvw;
+    text-shadow: 56px 32px 11px rgba(0, 0, 0, 0.16);
+}
+
+@keyframes materialize {
+    from {
+        transform: scale(.7);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
 @keyframes shine {
     from {
         background-position: center 0;
@@ -57,7 +76,7 @@
 }
 
 .num {
-
+    
     text-align: center;
     display: inline-block;
     align-content: center;
@@ -97,4 +116,14 @@
     
 }
 
+@keyframes materialize {
+    from {
+        transform: scale(.7);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
 

@@ -25,7 +25,14 @@ export default function Home({users}) {
             <>
             <Nav />
             {/* <h1>{testUser[0].name}</h1> */}
-                <div className = "garden">GARDEN</div>
+                <div className = "garden">
+                    <span className="g-letter">G</span>
+                    <span className="g-letter">A</span>
+                    <span className="g-letter">R</span>
+                    <span className="g-letter">D</span>
+                    <span className="g-letter">E</span>
+                    <span className="g-letter">N</span>
+                    </div>
                 <div className = "num">249</div>
             </>
 
