@@ -20,6 +20,7 @@ export default function Home({users}) {
     }, [])
 
 
+
     return (
         <div className = "homepage">
             <>
