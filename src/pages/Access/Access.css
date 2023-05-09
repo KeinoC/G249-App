@@ -6,6 +6,7 @@
     margin: 0 auto;
     padding: 1rem;
     width: 20vw;
+    z-index: 1;
 }
 
 .access-container {

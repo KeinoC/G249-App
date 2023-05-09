@@ -36,7 +36,6 @@ export default function Splash({ users }) {
 
   return (
     <motion.div className="homepage">
-      <Nav />
       <AnimatePresence>
         <motion.div
           initial={{ opacity: 0, x: '-100vw' }}

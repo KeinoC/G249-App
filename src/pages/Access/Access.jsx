@@ -13,7 +13,7 @@ import { useNavigate } from "react-router-dom";
 import Nav from "../Nav/Nav";
 import "./Access.css"
 
-function App() {
+function Access() {
     const navigate = useNavigate();
     const { user, setUser } = useContext(DataContext);
 
@@ -31,19 +31,7 @@ function App() {
     //     }
     // });
 
-    useEffect(() => {
-        const unsubscribe = auth.onAuthStateChanged((currentUser) => {
-            setUser(currentUser);
-            if (currentUser) {
-                navigate("/dashboard", { replace: true }); // Use navigate with replace option
-            } else {
-                navigate("/login", { replace: true }); // Use navigate with replace option
-            }
-        });
 
-        // Unsubscribe from the auth state change listener when component unmounts
-        return () => unsubscribe();
-    }, []);
 
     const register = async () => {
         try {
@@ -78,15 +66,6 @@ function App() {
         setUser({});
         navigate("/login");
     };
-
-    // on user logout / disconnect
-    // useEffect(() => {
-    //     if(user) {
-    //         navigate("/dashboard")
-    //     } else {
-    //         navigate("/login")
-    //     }
-    // },[loginEmail])
 
     return (
         <div className="App">
@@ -136,4 +115,4 @@ function App() {
     );
 }
 
-export default App;
+export default Access;
