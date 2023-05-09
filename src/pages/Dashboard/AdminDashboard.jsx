@@ -1,10 +1,17 @@
-import React from "react"
+import React, {useContext} from "react"
+import Nav from "../Nav/Nav"
+import { DataContext } from "../../redux/DataContext"
 
-function Dashboard() {
+function AdminDashboard() {
+
+const { user } = useContext(DataContext)
 
     return (
-        <h1> Hello from Testing Dashboard!!</h1>
+        <>
+        <Nav />
+        { user ? <AdminDashboard /> : <></>}
+        </>
     )
 }
 
-export default Dashboard
+export default AdminDashboard

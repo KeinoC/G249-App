@@ -3,7 +3,7 @@ import { link } from "react-router-dom";
 import Calend from "./Calendar.jsx";
 import "./calendar.css";
 import "./Availability.css"
-import "../Home/Home.css"
+import "../Home/Splash.css"
 import "../Nav/Nav.css"
 import Inquiry from "./Inquiry.jsx";
 import Nav from "../Nav/Nav.jsx";

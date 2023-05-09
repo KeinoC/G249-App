@@ -4,6 +4,7 @@ import AddEventForm from "./pages/Events/AddEventForm.js";
 import EventBlock from "./pages/Events/EventBlock.js";
 
 import Home from "./pages/Home/Home.jsx";
+import Splash from "./pages/Home/Splash.jsx";
 import Availability from "./pages/Availability/Availability.jsx";
 import Tour from "./pages/Tour/Tour.jsx";
 import About from "./pages/About/About.jsx";
@@ -15,7 +16,7 @@ import Dashboard from "./pages/Dashboard/Dashboard"
 // import { Route, Routes, useNavigate } from "react-router-dom";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import React, { useEffect, useState, useContext } from "react";
-import { DataContext } from "./redux/DataContext"
+import { DataContext, DataProvider } from "./redux/DataContext"
 
 function App() {
     const [masterEventList, setMasterEventList] = useState([]);
@@ -48,11 +49,12 @@ function App() {
 
 
     return (
+        <DataProvider>
         <div className="App">
             <BrowserRouter>
             {/* <Nav /> */}
                 <Routes>
-                    <Route exact path="/" element={<Home />} />
+                    <Route exact path="/" element={<Splash />} />
                     <Route
                         path="/availability"
                         element={
@@ -63,6 +65,7 @@ function App() {
                             />
                         }
                     />
+                    <Route path="/home" element={<Home />} />
                     <Route path="/tour" element={<Tour />} />
                     <Route path="/about" element={<About />} />
                     <Route path="/contact" element={<Contact />} />
@@ -88,6 +91,7 @@ function App() {
                 </Routes>
             </BrowserRouter>
         </div>
+        </DataProvider>
     );
 }
 

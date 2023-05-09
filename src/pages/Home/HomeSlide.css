@@ -1,0 +1,22 @@
+.home-slide-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    overflow-y: scroll;
+
+    max-width: 70vw;
+    height: 30vh;
+    margin: 0 auto;
+    box-shadow: var(--boxShadow1);
+    border-radius: .3rem;
+}
+
+.home-slide-image {
+    border-radius: .3rem;
+    min-height: 30vh;
+    min-width: 70vw;
+    object-fit: cover;
+    object-position: center;
+    overflow: hidden;
+}
